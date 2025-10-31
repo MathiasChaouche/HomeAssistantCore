@@ -1124,6 +1124,12 @@
     }
   },
   "exceptions": {
+    "command_not_supported": {
+      "message": "The command is not supported: {message}"
+    },
+    "end_date_before_start_date": {
+      "message": "End date must be after start date."
+    },
     "failed_to_connect_mqtt": {
       "message": "Failed to connect MQTT: {error}"
     },
@@ -1132,36 +1138,6 @@
     },
     "invalid_device_id": {
       "message": "Device for given device ID has not been configured."
-    },
-    "command_not_supported": {
-      "message": "The command is not supported: {message}"
-    },
-    "end_date_before_start_date": {
-      "message": "End date must be after start date."
-    }
-  },
-  "services": {
-    "get_energy_usage": {
-      "name": "Get energy usage",
-      "description": "Fetch energy usage by period. Retry after the next hour if rate-limited.",
-      "fields": {
-        "device_id": {
-          "name": "[%key:common::config_flow::data::device%]",
-          "description": "Select a device"
-        },
-        "period": {
-          "name": "Period",
-          "description": "Select a daily or monthly options"
-        },
-        "start_date": {
-          "name": "[%key:common::action::start%]",
-          "description": "Maximum of 31 days (daily basis) and 6 months (monthly basis)"
-        },
-        "end_date": {
-          "name": "End",
-          "description": "Maximum of 31 days (daily basis) and 6 months (monthly basis)"
-        }
-      }
     }
   },
   "selector": {
@@ -1170,6 +1146,30 @@
         "daily": "Daily",
         "monthly": "Monthly"
       }
+    }
+  },
+  "services": {
+    "get_energy_usage": {
+      "description": "Fetch energy usage by period. Retry after the next hour if rate-limited.",
+      "fields": {
+        "device_id": {
+          "description": "Select a device",
+          "name": "[%key:common::config_flow::data::device%]"
+        },
+        "end_date": {
+          "description": "Maximum of 31 days (daily basis) and 6 months (monthly basis)",
+          "name": "End"
+        },
+        "period": {
+          "description": "Select a daily or monthly options",
+          "name": "Period"
+        },
+        "start_date": {
+          "description": "Maximum of 31 days (daily basis) and 6 months (monthly basis)",
+          "name": "[%key:common::action::start%]"
+        }
+      },
+      "name": "Get energy usage"
     }
   }
 }
