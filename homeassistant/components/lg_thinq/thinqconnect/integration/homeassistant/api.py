@@ -11,7 +11,7 @@ import logging
 from collections.abc import Callable
 from typing import Any, Final
 
-from .thinqconnect import (
+from ....thinqconnect import (
     PROPERTY_READABLE,
     PROPERTY_WRITABLE,
     USAGE_MONTHLY,
@@ -51,7 +51,7 @@ from .thinqconnect import (
     WaterPurifierDevice,
     WineCellarDevice,
 )
-from .thinqconnect.devices.const import Location
+from ....thinqconnect.devices.const import Location
 
 from .property import ActiveMode, PropertyHolder, PropertyOption
 from .specification import (

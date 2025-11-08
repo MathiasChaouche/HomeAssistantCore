@@ -13,13 +13,13 @@ from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Any
 
-from .thinqconnect import (
+from ....thinqconnect import (
     PROPERTY_READABLE,
     PROPERTY_WRITABLE,
     ConnectBaseDevice,
 )
-from .thinqconnect.devices.const import Location
-from .thinqconnect.devices.const import Property as ThinQProperty
+from ....thinqconnect.devices.const import Location
+from ....thinqconnect.devices.const import Property as ThinQProperty
 
 
 class ActiveMode(Enum):
