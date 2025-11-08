@@ -20,6 +20,7 @@ class DehumidifierProfile(ConnectDeviceProfile):
                 "dehumidifierJobMode": Resource.DEHUMIDIFIER_JOB_MODE,
                 "humidity": Resource.HUMIDITY,
                 "airFlow": Resource.AIR_FLOW,
+                "moodLamp": Resource.MOOD_LAMP,
             },
             profile_map={
                 "operation": {"dehumidifierOperationMode": Property.DEHUMIDIFIER_OPERATION_MODE},
@@ -29,6 +30,9 @@ class DehumidifierProfile(ConnectDeviceProfile):
                     "targetHumidity": Property.TARGET_HUMIDITY,
                 },
                 "airFlow": {"windStrengthLevel": Property.WIND_STRENGTH},
+                "moodLamp": {
+                    "moodLampState": Property.MOOD_LAMP_STATE,
+                },
             },
         )
 
@@ -56,3 +60,7 @@ class DehumidifierDevice(ConnectBaseDevice):
 
     async def set_wind_strength(self, wind_strength: str) -> dict | None:
         return await self.do_enum_attribute_command(Property.WIND_STRENGTH, wind_strength)
+
+    async def set_mood_lamp_state(self, state: str) -> dict | None:
+        return await self.do_enum_attribute_command(Property.MOOD_LAMP_STATE, state)
+

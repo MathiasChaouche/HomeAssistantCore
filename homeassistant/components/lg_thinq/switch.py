@@ -99,6 +99,13 @@ DEVICE_TYPE_SWITCH_MAP: dict[DeviceType, tuple[ThinQSwitchEntityDescription, ...
             key=ThinQProperty.DEHUMIDIFIER_OPERATION_MODE,
             translation_key="operation_power",
         ),
+        ThinQSwitchEntityDescription(
+            key=ThinQProperty.MOOD_LAMP_STATE,
+            translation_key=ThinQProperty.MOOD_LAMP_STATE,
+            on_key="on",
+            off_key="off",
+            entity_category=EntityCategory.CONFIG,
+        ),
     ),
     DeviceType.DISH_WASHER: (
         ThinQSwitchEntityDescription(
