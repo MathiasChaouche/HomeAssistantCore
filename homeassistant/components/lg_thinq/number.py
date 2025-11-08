@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import logging
 
-from thinqconnect import DeviceType
-from thinqconnect.devices.const import Property as ThinQProperty
-from thinqconnect.integration import ActiveMode, TimerProperty
+from .thinqconnect import DeviceType
+from .thinqconnect.devices.const import Property as ThinQProperty
+from .thinqconnect.integration import ActiveMode, TimerProperty
 
 from homeassistant.components.number import (
     NumberDeviceClass,

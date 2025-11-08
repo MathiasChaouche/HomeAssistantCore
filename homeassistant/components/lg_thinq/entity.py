@@ -6,9 +6,9 @@ from collections.abc import Callable, Coroutine
 import logging
 from typing import Any
 
-from thinqconnect import ThinQAPIException
-from thinqconnect.devices.const import Location
-from thinqconnect.integration import PropertyState
+from .thinqconnect import ThinQAPIException
+from .thinqconnect.devices.const import Location
+from .thinqconnect.integration import PropertyState
 
 from homeassistant.core import callback
 from homeassistant.exceptions import ServiceValidationError

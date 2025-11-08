@@ -6,8 +6,8 @@ import logging
 from typing import Any
 import uuid
 
-from thinqconnect import ThinQApi, ThinQAPIErrorCodes, ThinQAPIException
-from thinqconnect.country import Country
+from .thinqconnect import ThinQApi, ThinQAPIErrorCodes, ThinQAPIException
+from .thinqconnect.country import Country
 import voluptuous as vol
 
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult

@@ -5,9 +5,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 import logging
 
-from thinqconnect import DeviceType
-from thinqconnect.devices.const import Property as ThinQProperty
-from thinqconnect.integration import ActiveMode
+from .thinqconnect import DeviceType
+from .thinqconnect.devices.const import Property as ThinQProperty
+from .thinqconnect.integration import ActiveMode
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,

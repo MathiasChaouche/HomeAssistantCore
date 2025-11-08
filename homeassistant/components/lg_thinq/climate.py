@@ -5,8 +5,8 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from thinqconnect import DeviceType
-from thinqconnect.integration import ExtendedProperty
+from .thinqconnect import DeviceType
+from .thinqconnect.integration import ExtendedProperty
 
 from homeassistant.components.climate import (
     ATTR_HVAC_MODE,
