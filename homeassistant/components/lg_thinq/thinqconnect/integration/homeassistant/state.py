@@ -10,8 +10,8 @@ from collections.abc import Awaitable, Callable, Iterable
 from datetime import time
 from typing import Any
 
-from .thinqconnect import ConnectBaseDevice, ThinQAPIException
-from .thinqconnect.devices.const import Property as ThinQProperty
+from ....thinqconnect import ConnectBaseDevice, ThinQAPIException
+from ....thinqconnect.devices.const import Property as ThinQProperty
 
 from .property import ActiveMode, PropertyHolder
 from .temperature import (

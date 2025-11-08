@@ -12,7 +12,7 @@ from datetime import time
 from enum import StrEnum, auto
 
 
-from .thinqconnect import (
+from ....thinqconnect import (
     AirConditionerDevice,
     AirPurifierDevice,
     AirPurifierFanDevice,
@@ -22,8 +22,8 @@ from .thinqconnect import (
     RobotCleanerDevice,
     VentilatorDevice,
 )
-from .thinqconnect.devices.const import Location
-from .thinqconnect.devices.const import Property as ThinQProperty
+from ....thinqconnect.devices.const import Location
+from ....thinqconnect.devices.const import Property as ThinQProperty
 
 from .property import PropertyOption
 
