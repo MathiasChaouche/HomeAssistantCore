@@ -6,8 +6,8 @@ from datetime import date
 import logging
 from typing import TYPE_CHECKING, Final
 
-from thinqconnect import USAGE_DAILY, USAGE_MONTHLY, ThinQAPIException
-from thinqconnect.integration import ThinQPropertyEx
+from .thinqconnect import USAGE_DAILY, USAGE_MONTHLY, ThinQAPIException
+from .thinqconnect.integration import ThinQPropertyEx
 import voluptuous as vol
 
 from homeassistant.config_entries import ConfigEntry, ConfigEntryState

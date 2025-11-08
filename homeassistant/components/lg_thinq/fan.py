@@ -6,9 +6,9 @@ from dataclasses import dataclass
 import logging
 from typing import Any
 
-from thinqconnect import DeviceType
-from thinqconnect.devices.const import Property as ThinQProperty
-from thinqconnect.integration import ActiveMode
+from .thinqconnect import DeviceType
+from .thinqconnect.devices.const import Property as ThinQProperty
+from .thinqconnect.integration import ActiveMode
 
 from homeassistant.components.fan import (
     FanEntity,

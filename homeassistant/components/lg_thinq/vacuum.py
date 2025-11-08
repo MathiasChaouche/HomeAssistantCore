@@ -6,8 +6,8 @@ from enum import StrEnum
 import logging
 from typing import Any
 
-from thinqconnect import DeviceType
-from thinqconnect.integration import ExtendedProperty
+from .thinqconnect import DeviceType
+from .thinqconnect.integration import ExtendedProperty
 
 from homeassistant.components.vacuum import (
     StateVacuumEntity,

@@ -8,7 +8,7 @@ import json
 import logging
 from typing import Any
 
-from thinqconnect import (
+from .thinqconnect import (
     DeviceType,
     ThinQApi,
     ThinQAPIErrorCodes,

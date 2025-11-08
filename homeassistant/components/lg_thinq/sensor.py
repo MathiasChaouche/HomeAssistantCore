@@ -8,9 +8,9 @@ from datetime import datetime, time, timedelta
 import logging
 import random
 
-from thinqconnect import USAGE_DAILY, USAGE_MONTHLY, DeviceType, ThinQAPIException
-from thinqconnect.devices.const import Property as ThinQProperty
-from thinqconnect.integration import ActiveMode, ThinQPropertyEx, TimerProperty
+from .thinqconnect import USAGE_DAILY, USAGE_MONTHLY, DeviceType, ThinQAPIException
+from .thinqconnect.devices.const import Property as ThinQProperty
+from .thinqconnect.integration import ActiveMode, ThinQPropertyEx, TimerProperty
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,

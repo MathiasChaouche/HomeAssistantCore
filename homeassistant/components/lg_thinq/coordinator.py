@@ -7,8 +7,8 @@ from datetime import time
 import logging
 from typing import TYPE_CHECKING, Any
 
-from thinqconnect import ThinQAPIException
-from thinqconnect.integration import HABridge
+from .thinqconnect import ThinQAPIException
+from .thinqconnect.integration import HABridge
 
 from homeassistant.const import EVENT_CORE_CONFIG_UPDATE
 from homeassistant.core import Event, HomeAssistant, callback

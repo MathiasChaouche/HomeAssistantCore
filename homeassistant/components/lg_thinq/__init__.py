@@ -6,8 +6,8 @@ import asyncio
 from dataclasses import dataclass, field
 import logging
 
-from thinqconnect import ThinQApi, ThinQAPIException
-from thinqconnect.integration import async_get_ha_bridge_list
+from .thinqconnect import ThinQApi, ThinQAPIException
+from .thinqconnect.integration import async_get_ha_bridge_list
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (

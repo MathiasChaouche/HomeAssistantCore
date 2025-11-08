@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import logging
 
-from thinqconnect import DeviceType
-from thinqconnect.integration import ActiveMode, ThinQPropertyEx
+from .thinqconnect import DeviceType
+from .thinqconnect.integration import ActiveMode, ThinQPropertyEx
 
 from homeassistant.components.event import EventEntity, EventEntityDescription
 from homeassistant.core import HomeAssistant
