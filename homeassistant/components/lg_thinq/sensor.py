@@ -782,6 +782,11 @@ class ThinQSensorEntity(ThinQEntity, SensorEntity):
             return (data.hour * 3600) + (data.minute * 60) + data.second
         return 0
 
+    @property
+    def available(self) -> bool:
+        """Return True if entity is available."""
+        return super().available and self.native_value is not 0
+
 
 class ThinQEnergySensorEntity(ThinQEntity, SensorEntity):
     """Represent a ThinQ energy sensor platform."""
