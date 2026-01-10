@@ -109,9 +109,10 @@ class ThinQHumidifierEntity(ThinQEntity, HumidifierEntity):
         super()._update_status()
 
         self._attr_target_humidity = self.data.value
-        self._attr_current_humidity = self.coordinator.data[
+        current_humidity = self.coordinator.data[
             self.entity_description.current_humidity_key
         ].value
+        self._attr_current_humidity = current_humidity if current_humidity != 0 else None
         self._attr_is_on = self.coordinator.data[
             self.entity_description.operation_key
         ].is_on
